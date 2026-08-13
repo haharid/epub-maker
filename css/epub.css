@@ -1599,3 +1599,540 @@ to bottom,
 .td_w {
 	width: auto;
 }
+.zx-b {
+    margin: 2em 0;
+    border-top: 0.12em solid #bbb;
+    border-bottom: 0.12em solid #bbb;
+}
+
+/* 한 줄 */
+.zx-r {
+    position: relative;
+    padding: 0.5em 4em 0.5em 0.5em;
+    border-bottom: 0.06em solid #ddd;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* 내용 줄만 흰색 */
+.zx-r:not(.zx-h) {
+    background-color: #ffffff;
+}
+
+/* 제목 */
+.zx-t {
+    font-size: 1em;
+    line-height: 1.2;
+    word-break: break-all;
+}
+
+/* 조회수 */
+.zx-v {
+    position: absolute;
+    right: 0.5em;
+    top: 0.8em;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* 헤더 */
+.zx-h {
+    background-color: #e9edf3;
+    font-weight: bold;
+}
+
+/* ========================================
+   낡은 대운신당 상가
+   ======================================== */
+
+.fortune-shop {
+  position: relative;
+  width: 94%;
+  max-width: 94%;
+  margin: 1.5em 3%;
+  margin: 4vw 3%;
+  padding: 0.8vw 0.7vw 0;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 14% 12%,
+      rgba(55, 50, 44, 0.18) 0,
+      rgba(55, 50, 44, 0.18) 0.18em,
+      transparent 0.22em
+    ),
+    radial-gradient(
+      circle at 84% 32%,
+      rgba(224, 218, 204, 0.2) 0,
+      rgba(224, 218, 204, 0.2) 0.3em,
+      transparent 0.34em
+    ),
+    linear-gradient(
+      to bottom,
+      #8c877d 0%,
+      #747069 100%
+    );
+
+  border: 1px solid #57544f;
+
+  box-shadow:
+    inset 0 0 0.8em rgba(46, 42, 37, 0.28),
+    0.15em 0.18em 0.25em rgba(0, 0, 0, 0.32);
+
+  page-break-inside: avoid;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-before: auto;
+  page-break-after: auto;
+}
+
+
+/* ========================================
+   대운신당 간판
+   ======================================== */
+
+.fortune-sign {
+  position: relative;
+  margin: 0 0 0.8vw;
+  padding: 1.7vw 0.7vw 1.5vw;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      103deg,
+      rgba(121, 88, 43, 0.1) 0%,
+      transparent 30%,
+      rgba(83, 67, 41, 0.1) 76%,
+      transparent 100%
+    ),
+    #e9e1cc;
+
+  border: 2px solid #75231e;
+
+  box-shadow:
+    inset 0 0 0.7em rgba(89, 68, 37, 0.16),
+    0.07em 0.1em 0.13em rgba(0, 0, 0, 0.28);
+
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+
+/* 간판 고정 나사 */
+
+.fortune-sign::before,
+.fortune-sign::after {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  width: 0.18em;
+  height: 0.18em;
+  background: #716957;
+  border-radius: 50%;
+}
+
+.fortune-sign::before {
+  left: 0.28em;
+}
+
+.fortune-sign::after {
+  right: 0.28em;
+}
+
+
+/* 대운신당 글씨 */
+
+.fortune-name {
+  margin: 0;
+  padding: 0;
+
+  color: #a51f1a;
+  font-family: sans-serif;
+
+  font-size: 1.2em;
+  font-size: 4.6vw;
+
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0.24em;
+
+  text-align: center;
+  text-indent: 0.24em;
+}
+
+
+/* ========================================
+   낡고 녹슨 창틀
+   ======================================== */
+
+.fortune-window-frame {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.35vw;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      to right,
+      #2b2d2b 0%,
+      #49392f 17%,
+      #292d2c 42%,
+      #3f342d 72%,
+      #292c2b 100%
+    );
+
+  border: 1px solid #3d3731;
+
+  box-shadow:
+    inset 0 0 0.25em rgba(0, 0, 0, 0.75),
+    0 0.08em 0.12em rgba(0, 0, 0, 0.25);
+
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+
+/* ========================================
+   창문 5칸 한 줄
+   ======================================== */
+
+.fortune-window-row {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  page-break-inside: avoid;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+
+/* 각각의 창문 */
+
+.fortune-pane {
+  position: relative;
+  display: table-cell;
+
+  width: 20%;
+  max-width: 20%;
+
+  height: 5em;
+  height: 17vw;
+
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  vertical-align: middle;
+
+  /* 흰 시트지가 벗겨진 곳으로 보이는 푸른 유리 */
+  background:
+    linear-gradient(
+      145deg,
+      #526d73 0%,
+      #40595f 58%,
+      #60777a 100%
+    );
+
+  border: 1px solid #272e2f;
+
+  box-shadow:
+    inset 0 0 0.48em rgba(13, 24, 26, 0.46),
+    inset 0.04em 0.04em rgba(255, 255, 255, 0.12);
+
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+
+/* ========================================
+   창문에 붙은 흰색 시트지
+   ======================================== */
+
+.white-window-film {
+  position: absolute;
+  z-index: 1;
+
+  top: 0.2vw;
+  right: 0.2vw;
+  bottom: 0.2vw;
+  left: 0.2vw;
+
+  display: block;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #efeee8 0%,
+      #e5e3da 68%,
+      #d8d5ca 100%
+    );
+
+  box-shadow:
+    inset 0 0 0.38em rgba(79, 70, 55, 0.12),
+    inset 0 -0.18em rgba(76, 65, 48, 0.1);
+}
+
+
+/* 시트지 아래에 쌓인 먼지 */
+
+.white-window-film::after {
+  content: "";
+  position: absolute;
+
+  left: 5%;
+  bottom: 0.18em;
+
+  width: 90%;
+  height: 0.12em;
+
+  background: rgba(84, 76, 65, 0.15);
+}
+
+
+/* ========================================
+   창마다 다르게 벗겨진 시트지
+   ======================================== */
+
+/* 첫 번째 창: 오른쪽 위가 벗겨짐 */
+
+.film-1 {
+  -webkit-clip-path: polygon(
+    0 0,
+    88% 0,
+    100% 14%,
+    100% 100%,
+    0 100%
+  );
+
+  clip-path: polygon(
+    0 0,
+    88% 0,
+    100% 14%,
+    100% 100%,
+    0 100%
+  );
+}
+
+
+/* 두 번째 창: 왼쪽 위가 벗겨짐 */
+
+.film-2 {
+  -webkit-clip-path: polygon(
+    12% 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 15%,
+    6% 10%,
+    0 5%
+  );
+
+  clip-path: polygon(
+    12% 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 15%,
+    6% 10%,
+    0 5%
+  );
+}
+
+
+/* 세 번째 창: 오른쪽 아래가 벗겨짐 */
+
+.film-3 {
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 82%,
+    91% 88%,
+    100% 94%,
+    87% 100%,
+    0 100%
+  );
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 82%,
+    91% 88%,
+    100% 94%,
+    87% 100%,
+    0 100%
+  );
+}
+
+
+/* 네 번째 창: 위쪽이 군데군데 뜯김 */
+
+.film-4 {
+  -webkit-clip-path: polygon(
+    0 8%,
+    9% 0,
+    24% 5%,
+    35% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  clip-path: polygon(
+    0 8%,
+    9% 0,
+    24% 5%,
+    35% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+
+/* 다섯 번째 창: 왼쪽 아래가 벗겨짐 */
+
+.film-5 {
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    17% 100%,
+    9% 91%,
+    0 96%
+  );
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    17% 100%,
+    9% 91%,
+    0 96%
+  );
+}
+
+
+/* ========================================
+   빨간색 시트지 글씨
+   ======================================== */
+
+.window-letter {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0 0.15vw;
+  box-sizing: border-box;
+
+  color: #b5221d;
+  font-family: sans-serif;
+
+  /* 리디 글자 설정과 관계없이 창 너비에 맞춤 */
+  font-size: 0.65em;
+  font-size: 2.8vw;
+
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0;
+
+  white-space: nowrap;
+  word-break: keep-all;
+
+  text-align: center;
+  text-indent: 0;
+}
+
+
+/* 일부만 남은 글자 시트지 */
+
+.window-letter .letter-remain {
+  display: inline-block;
+
+  color: #9e3a34;
+  opacity: 0.62;
+
+  -webkit-transform: rotate(-5deg) translateY(0.05em);
+  transform: rotate(-5deg) translateY(0.05em);
+}
+
+
+/* 접착력이 약해져 기울어진 글씨 */
+
+.window-letter.loose {
+  color: #a92b25;
+  opacity: 0.84;
+
+  -webkit-transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
+}
+
+
+/* ========================================
+   상가 아래쪽 낡은 벽
+   ======================================== */
+
+.fortune-shop-bottom {
+  position: relative;
+  width: 100%;
+
+  height: 0.8em;
+  height: 2.5vw;
+
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background: #716d65;
+  border-top: 1px solid #504d47;
+
+  box-shadow:
+    inset 0 0.28em 0.34em rgba(0, 0, 0, 0.2);
+}
+
+
+/* 벗겨진 페인트 */
+
+.fortune-shop-bottom::before {
+  content: "";
+  position: absolute;
+
+  top: 25%;
+  left: 7%;
+
+  width: 35%;
+  height: 27%;
+
+  background: #9c968b;
+  opacity: 0.65;
+
+  -webkit-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+
+
+/* 녹물 자국 */
+
+.fortune-shop-bottom::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  right: 14%;
+
+  width: 0.5em;
+  height: 82%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(101, 55, 34, 0.5),
+      transparent
+    );
+}
